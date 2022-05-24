@@ -98,16 +98,45 @@ class Rectangle(Shape):
     def setLength(self, _length:float) -> float:
         self._length = _length
 
-    def getArea(self, _width: float, _lenght: float) -> float:
-        area = _lenght * _width
+    def getArea(self) -> float:
+        area = self._length * self._width
         return area
 
-    def getPerimeter(self, _width:float, _length:float) -> float:
-        perimetro = 2 * (_length + _width)
+    def getPerimeter(self) -> float:
+        perimetro = 2 * (self._length + self._width)
         return perimetro
 
     def __str__(self) -> str:
         return f'Rectangle[{super(Rectangle, self).__str__()}, width={self._width}, length={self._length}]'
+
+class EquilateralTriangle(Shape):
+    _sideLength = 1.0
+
+    def __init__(self, *args):
+        super().__init__()
+        if len(args) == 1:
+            self._sideLength = args[0]
+        elif len(args) == 3:
+            self._sideLength = args[0]
+            self._color = args[1]
+            self._filled = args[2]
+
+    def getSideLenght(self) -> float:
+        return self._sideLength
+
+    def setSideLenght(self, _sideLenght:float) -> float:
+        self._sideLength = _sideLenght
+
+    def getArea(self) -> float:
+        area = (self._sideLength * self._sideLength)/2
+        return area
+
+    def getPerimeter(self) -> float:
+        perimetro = 3 * self._sideLength
+        return perimetro
+
+    def __str__(self) -> str:
+        return f'EquilateralTriangle[{super(EquilateralTriangle, self).__str__()}, sideLength={self._sideLength}]'
 
 class Square(Rectangle):
 
@@ -142,14 +171,28 @@ print(circulo.getArea(4))
 print("-----------Perimetro del circulo--------------")
 print(circulo.getPerimeter(4))
 print(circulo)
+
 rec = Rectangle()
 rec.setLength(3)
-rec.setWidth(3)
+rec.setWidth(6)
 print("--------------------Area del rectangulo-------------------")
-print(rec.getArea(18, 9))
+print(rec.getArea())
 print("--------------------Perimetro del rectangulo-------------------")
-print(rec.getPerimeter(18, 9))
+print(rec.getPerimeter())
 print(rec)
+
 square = Square()
-square.setSide(3)
+square.setSide(5)
+print("--------------------Area del cuadrado-------------------")
+print(square.getArea())
+print("--------------------Perimetro del cuadrado-------------------")
+print(square.getPerimeter())
 print(square)
+
+triangle = EquilateralTriangle()
+triangle.setSideLenght(3)
+print("--------------------Area del triangulo-------------------")
+print(triangle.getArea())
+print("--------------------Perimetro del triangulo-------------------")
+print(triangle.getPerimeter())
+print(triangle)
