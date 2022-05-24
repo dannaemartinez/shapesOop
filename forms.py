@@ -124,11 +124,12 @@ class EquilateralTriangle(Shape):
     def getSideLenght(self) -> float:
         return self._sideLength
 
-    def setSideLenght(self, _sideLenght:float) -> float:
-        self._sideLength = _sideLenght
+    def setSideLength(self, _sideLength:float) -> float:
+        self._sideLength = _sideLength
 
     def getArea(self) -> float:
-        area = (self._sideLength * self._sideLength)/2
+        h = self._sideLength * (math.cos(math.pi/6))
+        area = (self._sideLength * h)/2
         return area
 
     def getPerimeter(self) -> float:
@@ -190,7 +191,7 @@ print(square.getPerimeter())
 print(square)
 
 triangle = EquilateralTriangle()
-triangle.setSideLenght(3)
+triangle.setSideLength(3)
 print("--------------------Area del triangulo-------------------")
 print(triangle.getArea())
 print("--------------------Perimetro del triangulo-------------------")
