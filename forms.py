@@ -3,7 +3,7 @@ from Circle import Circle
 from Rectangle import Rectangle
 from Square import Square
 from EquilateralTriangle import EquilateralTriangle
-# in this project double wil be consider as float
+# in this project double will be consider as float
 
 if __name__ == '__main__':
     circulo = Circle(4, "blue", False)
