@@ -22,7 +22,7 @@ if __name__ == '__main__':
     print(rec)
 
 if __name__ == '__main__':
-    square = Square(5, "green", False)
+    square = Square(side=5, _color="green", _filled=False)
     print("--------------------Area del cuadrado-------------------")
     print(square.getArea())
     print("--------------------Perimetro del cuadrado-------------------")

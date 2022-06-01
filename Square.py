@@ -3,7 +3,7 @@ from Rectangle import Rectangle
 class Square(Rectangle):
 
     def __init__(self, side:float=1.0, _color:str="red", _filled:bool=True):
-        super().__init__(side, side, _color, _filled)
+        super().__init__(_width=side, _length=side, _color=_color, _filled=_filled)
 
 
     def getSide(self) -> float:
