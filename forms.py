@@ -14,7 +14,7 @@ if __name__ == '__main__':
     print(circulo)
 
 if __name__ == '__main__':
-    rec = Rectangle(6, 12, "reeed", False)
+    rec = Rectangle(6, 12, "yellow", False)
     print("--------------------Area del rectangulo-------------------")
     print(rec.getArea())
     print("--------------------Perimetro del rectangulo-------------------")
@@ -22,7 +22,7 @@ if __name__ == '__main__':
     print(rec)
 
 if __name__ == '__main__':
-    square = Square(5, "ggg", False)
+    square = Square(5, "green", False)
     print("--------------------Area del cuadrado-------------------")
     print(square.getArea())
     print("--------------------Perimetro del cuadrado-------------------")
@@ -30,7 +30,7 @@ if __name__ == '__main__':
     print(square)
 
 if __name__ == '__main__':
-    triangle = EquilateralTriangle(3, "rrrr", False)
+    triangle = EquilateralTriangle(6, "pink", False)
     print("--------------------Area del triangulo-------------------")
     print(triangle.getArea())
     print("--------------------Perimetro del triangulo-------------------")

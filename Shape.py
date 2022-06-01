@@ -20,11 +20,11 @@ class Shape(ABC):
         self._filled = _filled
 
     @abstractmethod
-    def getArea() -> float:
+    def getArea(self) -> float:
         pass
 
     @abstractmethod
-    def getPerimeter() -> float:
+    def getPerimeter(self) -> float:
         pass
 
     def __str__(self) -> str:

@@ -5,7 +5,8 @@ from Shape import Shape
 class Circle(Shape):
 
     def __init__(self, _radius:float=1.0, _color:str="red", _filled:bool=True):
-        super().__init__(_color, _filled)
+        self.setColor(_color)
+        self.setFilled(_filled)
         self._radius = _radius
 
     def getRadius(self) -> float:
