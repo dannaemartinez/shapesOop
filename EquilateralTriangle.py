@@ -20,8 +20,8 @@ class EquilateralTriangle(Shape):
         return area
 
     def getPerimeter(self) -> float:
-        perimetro = 3 * self._sideLength
-        return perimetro
+        perimeter = 3 * self._sideLength
+        return perimeter
 
     def __str__(self) -> str:
         return f'EquilateralTriangle[Shape[color={self._color}, filled={self._filled}, sideLength={self._sideLength}]]'

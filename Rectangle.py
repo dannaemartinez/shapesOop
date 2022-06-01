@@ -26,8 +26,8 @@ class Rectangle(Shape):
         return area
 
     def getPerimeter(self) -> float:
-        perimetro = 2 * (self._length + self._width)
-        return perimetro
+        perimeter = 2 * (self._length + self._width)
+        return perimeter
 
     def __str__(self) -> str:
         return f'Rectangle[Shape[color={self._color}, filled={self._filled}, width={self._width}, length={self._length}]]'

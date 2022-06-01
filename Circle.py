@@ -19,8 +19,8 @@ class Circle(Shape):
         return area
 
     def getPerimeter(self) -> float:
-        perimetro = 2 * math.pi * self._radius
-        return perimetro
+        perimeter = 2 * math.pi * self._radius
+        return perimeter
 
     def __str__(self) -> str:
         return f'Circle[Shape[color={self._color}, filled={self._filled}, radius={self._radius}]]'
